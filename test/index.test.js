@@ -2,7 +2,6 @@ const index = require('../index');
 const assert = require('assert');
 
 describe('Roman numeral converter', () => {
-  it('should convert number 1', () => {
   it('should convert numbers 1 to 10', () => {
     assert.equal(index.convertToRoman(1), 'I');
     assert.equal(index.convertToRoman(2), 'II');
@@ -15,5 +14,8 @@ describe('Roman numeral converter', () => {
     assert.equal(index.convertToRoman(9), 'IX');
     assert.equal(index.convertToRoman(10), 'X');
   });
+
+  it('should return the original input if value is over 10', () => {
+    assert.equal(index.convertToRoman(11), 11);
   });
 });
