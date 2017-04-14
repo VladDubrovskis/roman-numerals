@@ -1,8 +1,8 @@
 // in theory, the following two collections can be extended to support number above 3999
 // add the collection of the roman digits according to the rules from wikipedia
-const romanDigits = ['X', 'IX', 'V', 'IV', 'I'];
+const romanDigits = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
 // add the corresponding collection of the arabic numbers
-const arabicDigits = [10, 9, 5, 4, 1];
+const arabicDigits = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
 
 const convertToRoman = (input) => {
   const output = arabicDigits.reduce((romanValue, arabicValue, index) => {
