@@ -3,13 +3,13 @@
 Roman numerals package - converts number from 1 to 3999 to roman numerals and back
 
 ## Installation
-Run `npm install`
+Run `npm install` - this will install all the necessary dependencies
 
 ## Testing
-Run `npm test`
+Run `npm test` - this will run unit tests for the converter as well as the shallow render integration tests for the component
 
 ## Run
-Run `npm run`
+Run `npm start` - this will build the files and serve them on your local machine. The address to view it will be in console, but likely to be http://localhost:3000/
 
 ### Imrovements to be done
 - integration test coverage is lacking - mostly cause run into issues triggering the events withing preact and run out of time 
