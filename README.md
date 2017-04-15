@@ -21,5 +21,5 @@ Run `npm run`
 - in theory had an idea to write a game - go to a page, get 10 roman digits - have to answer corretly - possbily timed.
 - could display a lot more
 - could make the UI look better
-- could use testing framework
+- could use one testing framework rather than few, this occured when decided to go for a preact boilerplate
 - make sure of redux for maintaining the state
