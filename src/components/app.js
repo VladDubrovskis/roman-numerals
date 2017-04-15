@@ -18,7 +18,7 @@ export default class App extends Component {
 			<div id="app">
 				<Header />
 				<Router onChange={this.handleRoute}>
-					<Converter number="123" path="/" />
+					<Converter path="/" />
 				</Router>
 			</div>
 		);
