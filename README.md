@@ -11,7 +11,15 @@ Run `npm test` - this will run unit tests for the converter as well as the shall
 ## Run
 Run `npm start` - this will build the files and serve them on your local machine. The address to view it will be in console, but likely to be http://localhost:3000/
 
-### Imrovements to be done
+## Approach
+The way I approached the task was following: thought will use the TDD principles to guide me through the task.
+One of the first tests was to conver just one number, moving to 10 numbers, only in one direction: arabic to roman.
+Then had the conversion of the 10 done at very basic level thought it was good time to refactor to handle the subtractive notation cases.
+Once was happy with that decided to write the tests folloed by the code to convert from roman to arabic, which proved to be trickier to handle.
+Afterwards for the UI decided to go with preact bolierplate - comes with a lot of goodies. Had to move module and use mocha to run the tests, plus needed to add the Component for converter and wanted to have integration/shallow render tests, which proved a little trickier than expected until came across preact-render-to-string.
+The commit history might help with the idea of the approach I took better: https://github.com/VladDubrovskis/roman-numerals/commits/master
+
+## Imrovements to be done
 - integration test coverage is lacking - mostly cause run into issues triggering the events withing preact and run out of time 
 - though the unit test might seem like a little but of an overkill but wanted to make sure it handles all the necessary numbers
 - When rendering could use other lifecycle methids to make sure if the state has changed and if a re-render is necessary or not
