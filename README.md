@@ -12,8 +12,8 @@ Run `npm test`
 Run `npm run`
 
 ### Imrovements to be done
-- Use React vs Preact - preact seemed like a good idea but seem to be missing things like react-test-tools, e.g.  cannot seem to trigger events or componentDidMount in tests - possibly just run out of time
-- integration test coverage is lacking - mostly cause run into issues triggering the events withing preact and run out of time - though the unit test might seem like a little but of an overkill but wanted to make sure it handles all the necessary numbers
+- integration test coverage is lacking - mostly cause run into issues triggering the events withing preact and run out of time 
+- though the unit test might seem like a little but of an overkill but wanted to make sure it handles all the necessary numbers
 - When rendering could use other lifecycle methids to make sure if the state has changed and if a re-render is necessary or not
 - could prepopulate all digits and use a reducer to get the outcome
 - Could add validation on the input, e.g. not less than 1 and not more than 3999, for roman could use a regex - also if you are actually reading all this ping me a tweet [at] centas
@@ -22,3 +22,4 @@ Run `npm run`
 - could display a lot more
 - could make the UI look better
 - could use testing framework
+- make sure of redux for maintaining the state
