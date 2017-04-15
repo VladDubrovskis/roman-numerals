@@ -11,6 +11,13 @@ export default class Converter extends Component {
 		const convertedNumber = converter.toRoman(this.state.number) || converter.toArabic(this.state.number);
 		this.setState({ convertedNumber });
 	}
+	
+	componentWillMount() {
+		if (this.props.number) {
+			this.setState({ number: this.props.number });
+			this.setState({ convertedNumber: converter.toRoman(this.props.number) || converter.toArabic(this.props.number)});
+		}
+	}
 
 	updateText(e) {
 		this.setState({ number: e.target.value });
