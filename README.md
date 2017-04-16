@@ -17,7 +17,7 @@ One of the first tests was to conver just one number, moving to 10 numbers, only
 
 Then had the conversion of the 10 done at very basic level thought it was good time to refactor to handle the subtractive notation cases.
 
-Once was happy with that decided to write the tests folloed by the code to convert from roman to arabic, which proved to be trickier to handle.
+Once was happy with that decided to write the tests followed by the code to convert from roman to arabic, which proved to be trickier to handle.
 
 Afterwards for the UI decided to go with preact bolierplate - comes with a lot of goodies. Had to move module and use mocha to run the tests, plus needed to add the Component for converter and wanted to have integration/shallow render tests, which proved a little trickier than expected until came across preact-render-to-string.
 
