@@ -36,3 +36,4 @@ The commit history might help with the idea of the approach I took better: https
 - could make the UI look better
 - make sure of redux for maintaining the state
 - make Sass code DRY - could use variables for colors, etc
+- Cross browser styling - e.g. mobile webkit is taking over and making the button rounded
