@@ -12,8 +12,7 @@
     "prestart": "npm run build",
     "build": "cross-env NODE_ENV=production webpack -p --progress",
     "prebuild": "mkdirp build && ncp src/assets build/assets",
-    "test:unit": "mocha --require babel-register --recursive test/unit/",
-    "test": "npm run -s lint && npm run test:unit && npm run -s test:karma",
+    "test": "npm run -s lint && npm run -s test:karma",
     "test:karma": "karma start test/karma.conf.js --single-run",
     "lint": "eslint {src,test}"
   },

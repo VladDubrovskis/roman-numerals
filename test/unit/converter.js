@@ -1,7 +1,9 @@
 import * as converter from '../../src/lib/converter';
 import assert from 'assert';
-let arabic;
+let arabic = [];
 let roman;
+
+/*global sinon,expect*/
 
 describe('Roman numeral converter', () => {
 	before(() => {
@@ -10,25 +12,26 @@ describe('Roman numeral converter', () => {
 		roman = romanString.split(',');
 
 		// get array of all all arabic numbers from 1 to 3999
-		arabic = Array.from(Array(4000).keys());
-		arabic.shift();
+		for (let arrayValue = 1; arrayValue < 4000; arrayValue++) {
+			arabic.push(arrayValue);
+		}
 	});
 
 	it('should convert numbers 1 to 3999 to roman values', () => {
 		arabic.forEach((input, numberIndex) => {
-			assert.equal(converter.toRoman(input), roman[numberIndex]);
+			expect(converter.toRoman(input)).to.equal(roman[numberIndex]);
 		});
 	});
 
 	it('should convert numbers I to MMMCMXCIX to arabic values', () => {
 		roman.forEach((input, numberIndex) => {
-			assert.equal(converter.toArabic(input), arabic[numberIndex]);
+			expect(converter.toArabic(input)).to.equal(arabic[numberIndex]);
 		});
 	});
 
 	it('should convert number depending which one has been passed in', () => {
-		assert.equal(converter.convert(123), "CXXIII", "convert arabic to roman");
-		assert.equal(converter.convert("CXXIII"), 123, "convert roman to arabic");
+		expect(converter.convert(123)).to.equal("CXXIII");
+		expect(converter.convert("CXXIII")).to.equal(123);
 	});
 
 });
