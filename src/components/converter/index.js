@@ -24,7 +24,7 @@ export default class Converter extends Component {
 	render({ }, { number, convertedNumber }) {
 		return (
 			<div class={style.home}>
-				<h1>Roman/Arabic and Arabic/Roman numeral converter</h1>
+				<h1>Number converter</h1>
 				<p>Enter a number between 1 and 3999 or a roman number between I and MMMCMXCIX</p>
 				<form onSubmit={this.handleSubmit.bind(this)} action="javascript:">
 					<input type="text" value={number} onChange={this.updateText.bind(this)} />
