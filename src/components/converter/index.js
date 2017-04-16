@@ -2,20 +2,18 @@ import { h, Component } from 'preact';
 import * as converter from '../../lib/converter';
 import style from './style';
 
-
 export default class Converter extends Component {
 	state = { convertedNumber: null, number: '' }
 
 	handleSubmit(e) {
 		e.preventDefault();
-		const convertedNumber = converter.toRoman(this.state.number) || converter.toArabic(this.state.number);
-		this.setState({ convertedNumber });
+		this.setState({ convertedNumber: converter.convert(this.state.number) });
 	}
-	
+
 	componentWillMount() {
 		if (this.props.number) {
 			this.setState({ number: this.props.number });
-			this.setState({ convertedNumber: converter.toRoman(this.props.number) || converter.toArabic(this.props.number)});
+			this.setState({ convertedNumber: converter.convert(this.props.number)});
 		}
 	}
 

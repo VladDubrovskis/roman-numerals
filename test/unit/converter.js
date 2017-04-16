@@ -26,4 +26,9 @@ describe('Roman numeral converter', () => {
 		});
 	});
 
+	it('should convert number depending which one has been passed in', () => {
+		assert.equal(converter.convert(123), "CXXIII", "convert arabic to roman");
+		assert.equal(converter.convert("CXXIII"), 123, "convert roman to arabic");
+	});
+
 });
