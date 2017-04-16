@@ -35,3 +35,4 @@ The commit history might help with the idea of the approach I took better: https
 - could display a lot more
 - could make the UI look better
 - make sure of redux for maintaining the state
+- make Sass code DRY - could use variables for colors, etc
