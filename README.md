@@ -13,13 +13,13 @@ Run `npm start` - this will build the files and serve them on your local machine
 
 ## Approach
 The way I approached the task was following: thought will use the TDD principles to guide me through the task.
-One of the first tests was to conver just one number, moving to 10 numbers, only in one direction: arabic to roman.
+One of the first tests was to convert just one number, moving to 10 numbers, only in one direction: arabic to roman.
 
 Then had the conversion of the 10 done at very basic level thought it was good time to refactor to handle the subtractive notation cases.
 
 Once was happy with that decided to write the tests followed by the code to convert from roman to arabic, which proved to be trickier to handle.
 
-Afterwards for the UI decided to go with preact bolierplate - comes with a lot of goodies. Had to move module and use mocha to run the tests, plus needed to add the Component for converter and wanted to have integration/shallow render tests, which proved a little trickier than expected until came across preact-render-to-string.
+Afterwards for the UI decided to go with preact boilerplate - comes with a lot of goodies. Had to move module and use mocha to run the tests, plus needed to add the Component for converter and wanted to have integration/shallow render tests, which proved a little trickier than expected until came across preact-render-to-string.
 
 The commit history might help with the idea of the approach I took better: https://github.com/VladDubrovskis/roman-numerals/commits/master
 
@@ -37,3 +37,4 @@ The commit history might help with the idea of the approach I took better: https
 - make sure of redux for maintaining the state
 - make Sass code DRY - could use variables for colors, etc
 - Cross browser styling - e.g. mobile webkit is taking over and making the button rounded
+- In order to support the numbers above 3999 - in theory once could just add the characters and numbers to collection. Could not find those characters myself as most places seem to use either images or css to create overline effect. This of course would work only in order to convert the number from arabic to roman.
